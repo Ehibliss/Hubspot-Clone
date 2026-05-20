@@ -1,0 +1,37 @@
+#features {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  min-height: 100vh;
+}
+.feature-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  margin: 50px;
+  gap: 50px;
+  padding: 5rem;
+  background-color: transparent;
+  color: #000000;
+}
+.feature-image {
+  max-width: 600px;
+  max-height: 500px;
+  min-width: 300px;
+}
+.feature-image img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.feature-card h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+p {
+  margin: 2rem 0;
+}
