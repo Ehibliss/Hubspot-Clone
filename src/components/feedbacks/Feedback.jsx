@@ -4,8 +4,8 @@ import Patricia from "../../assets/10041.jpeg";
 import Aaron from "../../assets/10042.jpeg";
 import Frank from "../../assets/10043.jpeg";
 import Marie from "../../assets/10044.jpeg";
-import forward from "../../assets/10079.png";
-import backward from "../../assets/10081.png";
+import forward from "../../assets/10081.png";
+import backward from "../../assets/10079.png";
 
 function Feedback() {
   const feedbacks = [
@@ -62,19 +62,21 @@ function Feedback() {
             <img src={forward} alt=" forward icon" />
           </button>
 
-          <div className="card">
-            <div className="profile-img">
-              <img src={feedbacks[currentSlide].image} alt="" />
-            </div>
+          <div className="card-container">
+            <div className="card">
+              <div className="profile-img">
+                <img src={feedbacks[currentSlide].image} alt="profile" />
+              </div>
 
-            <p>{feedbacks[currentSlide].text}</p>
+              <p>{feedbacks[currentSlide].text}</p>
 
-            <div className="profile-info">
-              <h3>{feedbacks[currentSlide].name}</h3>
+              <div className="profile-info">
+                <h4>{feedbacks[currentSlide].name}</h4>
 
-              <span>{feedbacks[currentSlide].role}</span>
-              <br />
-              <span> {feedbacks[currentSlide].company} </span>
+                <span>{feedbacks[currentSlide].role}</span>
+                <br />
+                <span> {feedbacks[currentSlide].company} </span>
+              </div>
             </div>
 
             <div className="dots">

@@ -35,3 +35,44 @@
 p {
   margin: 2rem 0;
 }
+
+/* Responsiveness */
+
+/* Small phones */
+@media (min-width: 320px) and (max-width: 480px) {
+  .feature-container {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    margin: 20px;
+    gap: 10px;
+  }
+}
+
+/* Large phones */
+@media (min-width: 480px) and (max-width: 600px) {
+  .feature-container {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    margin: 20px;
+    gap: 10px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 600px) and (max-width: 768px) {
+  .feature-container {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    margin: 20px;
+    gap: 10px;
+  }
+}
+
+/* Small laptops */
+@media (min-width: 768px) and (max-width: 992px) {
+  .feature-container {
+    margin: 30px;
+    gap: 5rem;
+    padding: 4rem;
+  }
+}
