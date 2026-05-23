@@ -4,6 +4,8 @@ import Feature from "./components/features/Feature";
 import Testimonial from "./components/testimonials/Testimonial";
 import Footer from "./components/footer/Footer";
 import Feedback from "./components/feedbacks/Feedback";
+import Growing from "./components/growing/Growing";
+import Connect from "./components/connect/Connect";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Feature />
       <Testimonial />
       <Feedback />
+      <Growing />
+      <Connect />
       <Footer />
     </div>
   );

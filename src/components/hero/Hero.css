@@ -23,7 +23,7 @@
   font-weight: bold;
 }
 .hero-image {
-  max-width: 500px;
+  max-width: 400px;
   min-width: 300px;
   height: 300px;
 }
@@ -32,4 +32,39 @@
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+}
+
+/* Responsiveness */
+
+/* Small phones */
+@media (min-width: 320px) and (max-width: 480px) {
+  .hero-container {
+    flex-direction: column;
+    margin: 20px;
+    padding: 2rem;
+  }
+}
+
+/* Large phones */
+@media (min-width: 480px) and (max-width: 600px) {
+  .hero-container {
+    flex-direction: column;
+    margin: 30px;
+    padding: 2rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 600px) and (max-width: 768px) {
+  .hero-image {
+    display: none;
+  }
+}
+
+/* Small laptops */
+@media (min-width: 768px) and (max-width: 992px) {
+  .hero-container {
+    margin: 30px;
+    padding: 3rem;
+  }
 }
