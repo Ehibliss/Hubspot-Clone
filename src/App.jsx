@@ -6,6 +6,8 @@ import Footer from "./components/footer/Footer";
 import Feedback from "./components/feedbacks/Feedback";
 import Growing from "./components/growing/Growing";
 import Connect from "./components/connect/Connect";
+import Product from "./components/products/Product";
+import Resource from "./components/resources/Resource";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Feedback />
       <Growing />
       <Connect />
+      <Resource />
+      <Product />
       <Footer />
     </div>
   );
