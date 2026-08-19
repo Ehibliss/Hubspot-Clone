@@ -4,25 +4,56 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 body {
   font-family: serif, Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #a18f8f;
+  color: #000000;
 }
+
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3 {
+  font-size: 2rem;
   font-weight: 700;
 }
+
 h4,
 h5,
 h6 {
   font-size: 1.5rem;
+  font-weight: 700;
 }
+
 p {
   font-size: 1.1rem;
   padding: 0;
   margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }

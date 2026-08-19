@@ -1,18 +1,13 @@
 #resource {
   width: 100%;
+  padding: 4rem 7rem;
   background-color: #e9bddc4f;
-  margin: 0;
-  margin-bottom: 0;
-}
-.resource-container {
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 30px;
-  margin: 0 50px;
-  padding: 5rem;
-  background-color: transparent;
+  gap: 1rem;
 }
+
 .resource-card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -24,7 +19,7 @@
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  padding: 0 1rem;
+  padding: 1rem;
   color: #000;
   text-decoration: none;
   border-radius: 20px;
@@ -36,7 +31,7 @@
 }
 
 .resource-image {
-  width: 150px;
+  max-width: 150px;
   height: 150px;
 }
 .resource-image img {
@@ -45,61 +40,44 @@
   object-fit: cover;
 }
 
-/* Responsiveness */
-
-/* Small phones */
-@media (min-width: 320px) and (max-width: 480px) {
-  .resource-container {
-    gap: 30px;
-    margin: 20px;
-    padding: 2rem;
+@media (max-width: 1000px) {
+  #resource {
+    padding: 3rem;
   }
   .resource-card-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .resource-card-container {
     gap: 2rem;
   }
 }
 
-/* Large phones */
-@media (min-width: 500px) and (max-width: 600px) {
-  .resource-container {
-    gap: 30px;
-    margin: 20px;
-    padding: 2rem;
+@media (max-width: 700px) {
+  #resource {
+    padding: 3rem;
   }
   .resource-card-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .resource-card-container {
     gap: 2rem;
   }
 }
 
-/* Tablets */
-@media (min-width: 610px) and (max-width: 768px) {
-  .resource-container {
-    gap: 50px;
-    margin: 20px;
+@media (max-width: 400px) {
+  #resource {
     padding: 2rem;
+  }
+  .resource-card-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   .resource-card {
     padding: 0 1rem;
   }
   .resource-card-container {
     gap: 1.5rem;
-  }
-}
-
-/* Small laptops */
-@media (min-width: 820px) and (max-width: 1024px) {
-  .resource-container {
-    gap: 50px;
-    margin: 30px;
-    padding: 3rem;
-  }
-  .resource-card-container {
-    gap: 2rem;
   }
 }

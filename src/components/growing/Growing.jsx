@@ -2,8 +2,7 @@ import "./Growing.css";
 import { useState } from "react";
 import careereimage from "../../assets/10062.png";
 import hubspotbusinessimage from "../../assets/10063.png";
-import forward from "../../assets/10081.png";
-import backward from "../../assets/10079.png";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 function Growing() {
   const growing = [
@@ -31,39 +30,37 @@ function Growing() {
   }
   return (
     <section id="growing-section">
-      <div className="growing-container">
-        <h2>Growing Better Together</h2>
-        <div className="growing-card-container">
-          <button onClick={prevSlide} className="growing-icon">
-            <img src={forward} alt=" forward icon" />
-          </button>
+      <h2>Growing Better Together</h2>
+      <div className="growing-card-container">
+        <button onClick={prevSlide} className="growing-icon">
+          <FiChevronLeft />
+        </button>
 
-          <div className="card-container">
-            <div className="growing-card">
-              <div className="growing-img">
-                <img src={growing[currentSlide].Image} alt="" />
-              </div>
-              <div className="business-info">
-                <h4> {growing[currentSlide].Name} </h4>
-                <p>{growing[currentSlide].Text}</p>
-                <a href="#">{growing[currentSlide].Read}</a>
-              </div>
+        <div className="card-container">
+          <div className="growing-card">
+            <div className="growing-img">
+              <img src={growing[currentSlide].Image} alt="" />
             </div>
-            <div className="dots">
-              {growing.map((item, index) => (
-                <span
-                  key={index}
-                  className={currentSlide === index ? "dot active" : "dot"}
-                  onClick={() => setCurrentSlide(index)}
-                ></span>
-              ))}
+            <div className="business-info">
+              <h4> {growing[currentSlide].Name} </h4>
+              <p>{growing[currentSlide].Text}</p>
+              <a href="#">{growing[currentSlide].Read}</a>
             </div>
           </div>
-
-          <button onClick={nextSlide} className="growing-icon">
-            <img src={backward} alt="backward icon" />
-          </button>
+          <div className="dots">
+            {growing.map((item, index) => (
+              <span
+                key={index}
+                className={currentSlide === index ? "dot active" : "dot"}
+                onClick={() => setCurrentSlide(index)}
+              ></span>
+            ))}
+          </div>
         </div>
+
+        <button onClick={nextSlide} className="growing-icon">
+          <FiChevronRight />
+        </button>
       </div>
     </section>
   );
