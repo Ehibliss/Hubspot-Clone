@@ -4,10 +4,9 @@ import Patricia from "../../assets/10041.jpeg";
 import Aaron from "../../assets/10042.jpeg";
 import Frank from "../../assets/10043.jpeg";
 import Marie from "../../assets/10044.jpeg";
-import forward from "../../assets/10081.png";
-import backward from "../../assets/10079.png";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-function Feedback() {
+export default function Feedback() {
   const feedbacks = [
     {
       image: Patricia,
@@ -49,53 +48,50 @@ function Feedback() {
   }
   return (
     <section id="feedbacks-section">
-      <div className="feedback-container">
-        <div className="feedback-text">
-          <h3>What Our Customers Say</h3>
-          <p>
-            See how HubSpot customers are growing their businesses and getting
-            incredible results.
-          </p>
-        </div>
-        <div className="container">
-          <button onClick={prevSlide} className="feedback-icon">
-            <img src={forward} alt=" forward icon" />
-          </button>
+      <div className="feedback-text">
+        <h3>What Our Customers Say</h3>
+        <p>
+          See how HubSpot customers are growing their businesses and getting
+          incredible results.
+        </p>
+      </div>
+      <div className="container">
+        <button onClick={prevSlide} className="feedback-icon">
+          <FiChevronLeft />
+        </button>
 
-          <div className="card-container">
-            <div className="card">
-              <div className="profile-img">
-                <img src={feedbacks[currentSlide].image} alt="profile" />
-              </div>
-
-              <p>{feedbacks[currentSlide].text}</p>
-
-              <div className="profile-info">
-                <h4>{feedbacks[currentSlide].name}</h4>
-
-                <span>{feedbacks[currentSlide].role}</span>
-                <br />
-                <span> {feedbacks[currentSlide].company} </span>
-              </div>
+        <div className="card-container">
+          <div className="card">
+            <div className="profile-img">
+              <img src={feedbacks[currentSlide].image} alt="profile" />
             </div>
 
-            <div className="dots">
-              {feedbacks.map((item, index) => (
-                <span
-                  key={index}
-                  className={currentSlide === index ? "dot active" : "dot"}
-                  onClick={() => setCurrentSlide(index)}
-                ></span>
-              ))}
+            <p>{feedbacks[currentSlide].text}</p>
+
+            <div className="profile-info">
+              <h4>{feedbacks[currentSlide].name}</h4>
+
+              <span>{feedbacks[currentSlide].role}</span>
+              <br />
+              <span> {feedbacks[currentSlide].company} </span>
             </div>
           </div>
 
-          <button onClick={nextSlide} className="feedback-icon">
-            <img src={backward} alt="backward icon" />
-          </button>
+          <div className="dots">
+            {feedbacks.map((item, index) => (
+              <span
+                key={index}
+                className={currentSlide === index ? "dot active" : "dot"}
+                onClick={() => setCurrentSlide(index)}
+              ></span>
+            ))}
+          </div>
         </div>
+
+        <button onClick={nextSlide} className="feedback-icon">
+          <FiChevronRight />
+        </button>
       </div>
     </section>
   );
 }
-export default Feedback;

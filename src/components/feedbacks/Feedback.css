@@ -1,18 +1,16 @@
 #feedbacks-section {
   background-color: #ffffff;
-  margin: 0;
+  padding: 4rem 7rem;
   width: 100%;
   text-align: center;
   min-height: 100vh;
-}
-.feedback-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 50px;
+  align-items: center;
   gap: 5rem;
-  padding: 5rem;
 }
+
 .container {
   display: flex;
   align-items: center;
@@ -25,21 +23,17 @@
 }
 .card {
   position: relative;
-  max-width: 700px;
-  min-width: 320px;
   background: #ffffff;
   padding: 5rem;
+  gap: 5rem;
   border-radius: 20px;
   text-align: center;
   border: 1px solid #4d1d1d40;
 }
 
-.card p {
-  font-size: 1.5rem;
-}
 .profile-img {
-  width: 100px;
-  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
   border-radius: 50%;
   position: absolute;
   top: -40px;
@@ -55,9 +49,7 @@
 .profile-info {
   border-top: 1px solid #4d1d1d40;
   margin-top: 30px;
-  padding-top: 30px;
-  margin-left: -50px;
-  margin-right: -50px;
+  padding-top: 1rem;
 }
 
 .feedback-icon {
@@ -65,11 +57,15 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  padding: 0.5rem;
   border: 0;
   background-color: #e9bddc4f;
 }
+.feedback-icon svg {
+  color: #000;
+  font-size: 15px;
+}
+
 .feedback-icon:hover {
   background-color: #ffffff;
 }
@@ -94,52 +90,21 @@
   background: black;
 }
 
-/* Responsiveness */
-
-/* Small phones */
-@media (min-width: 320px) and (max-width: 480px) {
-  .feedback-container {
-    margin: 20px;
-    gap: 5rem;
-    padding: 2rem;
-  }
-  .container {
-    gap: 2rem;
+@media (max-width: 1024px) {
+  #feedbacks-section {
+    padding: 2rem 3rem;
   }
 }
 
-/* Large phones */
-@media (min-width: 485px) and (max-width: 600px) {
-  .feedback-container {
-    margin: 20px;
-    gap: 4rem;
-    padding: 2rem;
+@media (max-width: 600px) {
+  #feedbacks-section {
+    padding: 1.5rem;
   }
-  .container {
-    gap: 2rem;
+  .feedback-icon {
+    display: none;
   }
-}
 
-/* Tablets */
-@media (min-width: 610px) and (max-width: 768px) {
-  .feedback-container {
-    margin: 20px;
-    gap: 5rem;
-    padding: 2rem;
-  }
   .container {
-    gap: 2rem;
-  }
-}
-
-/* Small laptops */
-@media (min-width: 820px) and (max-width: 1024px) {
-  .feedback-container {
-    margin: 30px;
-    gap: 5rem;
-    padding: 3rem;
-  }
-  .container {
-    gap: 4rem;
+    gap: 1rem;
   }
 }
